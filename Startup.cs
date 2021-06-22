@@ -42,6 +42,7 @@ namespace CadastroDeJogos
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "CadastroDeJogos v1"));
+
             }
 
             app.UseHttpsRedirection();
