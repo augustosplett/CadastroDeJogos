@@ -15,6 +15,6 @@ namespace CadastroDeJogos.InputModel
 
         [Required]
         [Range(1, 1000, ErrorMessage = "O valor do jogo deve ser entre 1 e 1000 reais")]  
-        public double preco { get; set; }   
+        public double Preco { get; set; }   
     }
 }

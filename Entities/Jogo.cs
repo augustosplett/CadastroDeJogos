@@ -1,15 +1,15 @@
 using System;
 
-namespace CadastroDeJogos.ViewModels
+namespace CadastroDeJogos.Entities
 {
-
-    public class JogoViewModel
+    public class Jogo
     {
         public Guid Id { get; set; }
-        public string Nome { get; set; }
-        public string Produtora { get; set; }
-        public double Preco { get; set; }
         
+        public string Nome { get; set; }
+        
+        public string Produtora { get; set; }
+        
+        public double Preco { get; set; }
     }
-
 }

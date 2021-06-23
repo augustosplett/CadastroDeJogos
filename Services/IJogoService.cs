@@ -6,7 +6,7 @@ using CadastroDeJogos.ViewModels;
 
 namespace CadastroDeJogos.Services
 {
-    public interface IJogoService
+    public interface IJogoService : IDisposable
     {
         Task<List<JogoViewModel>> Obter(int pagina, int quantidade);
         Task<JogoViewModel> Obter(Guid id);
@@ -15,4 +15,6 @@ namespace CadastroDeJogos.Services
         Task Atualizar(Guid id, double preco);
         Task Remover(Guid id);
     }
+
+
 }
