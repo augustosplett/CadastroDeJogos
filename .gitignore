@@ -1,4 +1,4 @@
-
+#"Server=localhost,1433;Database=Jogo; User Id=SA;Password=CadJogos123;"
 # Created by https://www.toptal.com/developers/gitignore/api/aspnetcore
 # Edit at https://www.toptal.com/developers/gitignore?templates=aspnetcore
 
@@ -274,3 +274,4 @@ __pycache__/
 # tools/
 
 # End of https://www.toptal.com/developers/gitignore/api/aspnetcore
+Queries

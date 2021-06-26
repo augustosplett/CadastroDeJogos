@@ -53,7 +53,7 @@ namespace CadastroDeJogos.Controllers.V1
                 return Ok(jogo);
 
             }
-            catch(JogoJaCadastradoException ex)
+            catch(JogoJaCadastradoException)
             {
                 return UnprocessableEntity("Ja existe um jogo cadastrado com esse noma para essa produtora");
             }
@@ -66,7 +66,7 @@ namespace CadastroDeJogos.Controllers.V1
                 await _jogoService.Atualizar(idJogo, jogo);
                 return Ok();
             }
-            catch(JogoNaoCadastradoException ex)
+            catch(JogoNaoCadastradoException)
             {
                 return NotFound("Não existe este jogo");
             }
@@ -79,7 +79,7 @@ namespace CadastroDeJogos.Controllers.V1
                 await _jogoService.Atualizar(idJogo, preco);
                 return Ok();
             }
-            catch(JogoNaoCadastradoException ex)
+            catch(JogoNaoCadastradoException )
             {
                 return NotFound("Não existe este jogo");   
             }
@@ -93,7 +93,7 @@ namespace CadastroDeJogos.Controllers.V1
                 await _jogoService.Remover(idJogo);
                 return Ok();
             }
-            catch(JogoNaoCadastradoException ex)
+            catch(JogoNaoCadastradoException )
             {
                 return NotFound("Não existe este jogo");   
             }
