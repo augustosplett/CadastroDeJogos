@@ -26,4 +26,26 @@ Server=localhost,1433;User Id=SA;Password="senha configurada no momento de insta
 Foram utilizados as informações decritas no item 4.
 
 
-
+##Criação do Banco de dados em si
+Utilizando a extensão do vs code, fiz a criação um novo banco de dados utilizando os seguintes comendos:
+  
+  CREATE DATABASE Jogo;
+  
+  USE JOGO;
+  
+  CREATE LOGIN NewAdminName WITH PASSWORD = 'SenhaApi123';
+  
+  IF NOT EXISTS (SELECT * FROM sys.database_principals WHERE name = N'NewAdminName')
+  BEGIN
+    CREATE USER [NewAdminName] FOR LOGIN [NewAdminName]
+    EXEC sp_addrolemember N'db_owner', N'NewAdminName'
+  END;
+  
+  CREATE table Jogos 
+  (Id UNIQUEIDENTIFIER PRIMARY KEY default NEWID(), Nome varchar(50), Produtora varchar(50), 
+  Preco float(53))
+  
+Inseri um registro de testes
+  
+  insert into Jogos values ('3fa85f64-5717-4562-b3fc-2c963f66afa6', 'JogoJogo', 'MinhaProdutora', 300.11)
+  
